@@ -1,0 +1,63 @@
+{
+  "name": "vite-plugin-stitches",
+  "version": "0.0.1",
+  "description": "A tiny helper to configure SSR for Stitches in Vite ✨",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joe-bell/vite-plugin-stitches.git"
+  },
+  "author": "Joe Bell <joe@joebell.co.uk>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/joe-bell/vite-plugin-stitches/issues"
+  },
+  "homepage": "https://github.com/joe-bell/vite-plugin-stitches#readme",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "scripts": {
+    "prepare": "npm run build",
+    "es:build": "esbuild src/index.ts --outdir=dist --format=cjs",
+    "ts:build": "tsc --emitDeclarationOnly --outDir dist",
+    "build": "npm run es:build && npm run ts:build",
+    "lint": "tsc --noEmit",
+    "format": "prettier --write",
+    "commit": "git-cz"
+  },
+  "peerDependencies": {
+    "@stitches/core": ">= 0.1.0",
+    "vite": ">= 2.1.5"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "12.1.1",
+    "@commitlint/config-conventional": "12.1.1",
+    "@stitches/core": "0.1.9",
+    "commitizen": "4.2.3",
+    "concurrently": "6.0.2",
+    "esbuild": "0.11.19",
+    "husky": "4.3.8",
+    "lint-staged": "10.5.4",
+    "prettier": "2.2.1",
+    "typescript": "4.2.4",
+    "vite": "2.2.4"
+  }
+}
