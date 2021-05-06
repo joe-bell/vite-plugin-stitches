@@ -1,4 +1,14 @@
-> ⚠️ **EXPERIMENTAL - USE WITH CAUTION**
+<blockquote align="center">
+  <p>
+    ⚠️
+  </p>
+  <p>
+    <strong>EXPERIMENTAL</strong>
+  </p>
+  <p>
+    You probably shouldn't use this unless you're me.
+  </p>
+</blockquote>
 
 <h1 align="center">vite-plugin-stitches</h1>
 
