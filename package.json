@@ -50,7 +50,7 @@
   "devDependencies": {
     "@commitlint/cli": "12.1.4",
     "@commitlint/config-conventional": "12.1.4",
-    "@stitches/core": "0.1.9",
+    "@stitches/core": "0.2.2",
     "commitizen": "4.2.4",
     "concurrently": "6.2.0",
     "esbuild": "0.12.1",
